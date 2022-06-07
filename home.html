@@ -17,29 +17,54 @@
 <body class="container-main">
     <header>
         <nav class="nav-main">
-            <a class="nav-link" href="./home.html">Home</a>
-            <a class="nav-link" href="./register.html">Register</a>
-            <a class="nav-link" href="./about.html">About</a>
+            <a class="nav-link" href="./home.html">Inicio</a>
+            <a class="nav-link" href="./register.html">Registro</a>
+            <a class="nav-link" href="./about.html">Sobre</a>
         </nav>
     </header>
     <div class="body-main">
-        <h1>
-            Home
-        </h1>
+        <h4>
+            Usuarios Registrados
+        </h4>
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Nascimento</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>{{nome}}</td>
+                    <td>{{cpf}}</td>
+                    <td>{{nascimento}}</td>
+                    <td>{{email}}</td>
+                    <td>{{telefone}}</td>
+                </tr>
+            </tbody>
+        </table>
+
     </div>
-    
+
     <footer class="footer-main">
-        <div>
-            github
-        </div>
-        <div>
-            facebook
-        </div>
-        <div>
-            linkedln
-        </div>
-        <div>
-            instagram
+        <div class="icons-footer">
+            <a href="https://www.facebook.com/alisson.patrick.9615/" target="_blank">
+                <img class="icons" src="./images/facebook-icon.svg">
+            </a>
+            <a href="https://www.instagram.com/alissopatrian/" target="_blank">
+                <img class="icons" src="./images/instagram-icon.svg">
+            </a>
+            <a href="https://github.com/AlissonPatrickk" target="_blank">
+                <img class="icons" src="./images/github-icon.svg">
+            </a>
+            <a href="https://www.linkedin.com/in/alisson-patrick-paes-de-souza-0182331b9/" target="_blank">
+                <img class="icons" src="./images/linkdin-icon.svg">
+            </a>
         </div>
     </footer>
 

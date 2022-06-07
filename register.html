@@ -2,68 +2,76 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>registration of people</title>
-    <link rel="stylesheet" href="./styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
-        crossorigin="anonymous"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>registration of people</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <script src="main.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
 </head>
 
-<body  class="col-md-12">
-    <header >
-        <nav class="nav-main">
-            <a class="nav-link" href="./home.html">Home</a>
-            <a class="nav-link" href="./register.html">Register</a>
-            <a class="nav-link" href="./about.html">About</a>
-        </nav>
-    </header>
-    <div class="body-main">
-        <form class="row gap">
-            <div class="col-md-12">
-              <label for="namec" class="form-label">Nome Completo</label>
-              <input type="email" class="form-control" id="nomecompleto">
-            </div>
-            <div class="col-md-6">
-              <label  class="birthday">Data de Nascimento</label>
-              <input type="date" class="form-control" id="aniversario">
-            </div>
-            <div class="col-md-6">
-              <label for="documment" class="form-label">CPF</label>
-              <input type="number" class="form-control" id="cpf" maxlength="10">
-            </div>
-            <div class="col-md-6">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email">
-            </div>
-            <div class="col-md-6">
-              <label for="phone" class="form-label">Telefone</label>
-              <input type="number" class="form-control" id="telefone">
-            </div>
-            <div class="col-md-6">
-              <button type="submit" class="btn btn-primary">Enviar</button>
-            </div>
-          </form>
+<body class="col-md-12">
+  <header>
+    <nav class="nav-main">
+      <a class="nav-link" href="./home.html">Inicio</a>
+      <a class="nav-link" href="./register.html">Registro</a>
+      <a class="nav-link" href="./about.html">Sobre</a>
+    </nav>
+  </header>
+
+  <div class="body-main">
+
+    <h4> Cadastra Usuarios</h4>
+
+    <div class="container">
+      <form class="row align-items-center">
+        <div class="col-12 py-4 px-lg-6">
+          <label class="form-label">Nome Completo</label>
+          <input type="text" class="form-control" id="nomecompleto">
+        </div>
+        <div class="col-md-6 py-4 px-lg-6">
+          <label class="form-label">CPF</label>
+          <input type="text" class="form-control" id="cpf">
+        </div>
+        <div class="col-md-6 py-4 px-lg-6">
+          <label class="form-label">Data de Nascimento</label>
+          <input type="date" class="form-control" id="dataNascimento">
+        </div>
+        <div class="col-md-6 py-4 px-lg-6">
+          <label class="form-label">Email</label>
+          <input type="email" class="form-control" id="email">
+        </div>
+        <div class="col-md-6 py-4 px-lg-6">
+          <label class="form-label">Telefone</label>
+          <input type="number" class="form-control" id="telefone">
+        </div>
+      </form>
     </div>
-    
-    <footer class="footer-main">
-        <div>
-            github
-        </div>
-        <div>
-            facebook
-        </div>
-        <div>
-            linkedln
-        </div>
-        <div>
-            instagram
-        </div>
-    </footer>
+    <div>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </div>
+  </div>
+
+  <footer class="footer-main">
+    <div class="icons-footer">
+      <a href="https://www.facebook.com/alisson.patrick.9615/" target="_blank">
+        <img class="icons" src="./images/facebook-icon.svg">
+      </a>
+      <a href="https://www.instagram.com/alissopatrian/" target="_blank">
+        <img class="icons" src="./images/instagram-icon.svg">
+      </a>
+      <a href="https://github.com/AlissonPatrickk" target="_blank">
+        <img class="icons" src="./images/github-icon.svg">
+      </a>
+      <a href="https://www.linkedin.com/in/alisson-patrick-paes-de-souza-0182331b9/" target="_blank">
+        <img class="icons" src="./images/linkdin-icon.svg">
+      </a>
+    </div>
+  </footer>
 
 </body>
 
