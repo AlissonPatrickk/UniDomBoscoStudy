@@ -28,10 +28,12 @@
     <h4> Cadastra Usuarios</h4>
 
     <div class="container">
-      <form class="row align-items-center" id="form">
+
+      <form class="row align-items-center">
+
         <div class="col-12 py-4 px-lg-6">
           <label class="form-label">Nome Completo</label>
-          <input type="text" class="form-control" id="nomeCompleto" data-index="new" required>
+          <input type="text" class="form-control" id="nomeCompleto" required>
         </div>
         <div class="col-md-6 py-4 px-lg-6">
           <label class="form-label">CPF</label>
@@ -49,10 +51,12 @@
           <label class="form-label">Telefone</label>
           <input type="text" class="form-control" id="telefone" maxlength="11" required>
         </div>
+
+        <div>
+          <button type="submit" id="submit" onclick="sendUsers()" class="btn btn-primary" >Enviar</button>
+        </div>
+
       </form>
-    </div>
-    <div>
-      <button id="salvar" type="submit" class="btn btn-primary">Enviar</button>
     </div>
   </div>
 
