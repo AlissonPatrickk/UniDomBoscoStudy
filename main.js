@@ -1,25 +1,29 @@
-function sendUsers() {
-    var nomeCompleto = document.getElementById('#nomeCompleto');
-    var cpf = document.getElementById('#cpf');
-    var dataNascimento = document.getElementById('#dataNascimento');
-    var email = document.getElementById('#email');
-    var telefone = document.getElementById('#telefone');
+function sendUsers(evt) {
+    evt.preventDefault()
+    let nomeCompleto = document.getElementById('nomeCompleto').value;
+    let cpf = document.getElementById('cpf').value;
+    let dataNascimento = document.getElementById('dataNascimento').value;
+    let email = document.getElementById('email').value;
+    let telefone = document.getElementById('telefone').value;
 
-    userObject = {
-        "nomeCompleto": "",
-        "cpf": "",
-        "dataNascimento": "",
-        "email": "",
-        "telefone": "",
+    let userObject = {
+        nomeCompleto: nomeCompleto,
+        cpf: cpf,
+        dataNascimento: dataNascimento,
+        email: email,
+        telefone: telefone
     }
-    userObject.nomeCompleto = nomeCompleto;
-    userObject.cpf = cpf;
-    userObject.dataNascimento = dataNascimento;
-    userObject.email = email;
-    userObject.telefone = telefone;
 
-     var getLocalStorage = () => JSON.parse(localStorage.getItem('db_user')) ?? []
-     var setLocalStorage = (userObject) => localStorage.setItem('db_user', JSON.stringify(userObject))
-    
-    return console.log(getLocalStorage, setLocalStorage )
+    let saveArray = JSON.parse(localStorage.getItem('db_users'))
+
+    if (!saveArray) {
+        console.log(userObject)
+        localStorage.setItem('db_users', JSON.stringify([userObject]))
+    } else {
+        saveArray.push(userObject);
+        localStorage.setItem('db_users', JSON.stringify(saveArray))
+    }
+
+    document.getElementById('formUsers').reset();
+
 }
