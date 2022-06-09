@@ -1,5 +1,6 @@
 .container-main{
-    width: 100%;
+    width: 100vw;
+    height: auto;
     padding: 0;
     margin: 0%;
     display: flex;
@@ -29,16 +30,24 @@
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     gap: 2%;
-    height: 50px;
-    
+    height: 50px; 
 }
 .icons-footer{
     display: flex;
-   
 }
 .icons{
     object-fit: contain;
     width: 60%;
     height: auto;
-
+}
+.table-users{
+    min-width: 90vw;
+    height: auto;
+    margin-top: 15px;
+    background-color: rgb(240, 241, 243);
+    border-radius: 15px;
+}
+.header-table{
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }

@@ -1,4 +1,4 @@
-function sendUsers(evt) {
+const sendUsers = (evt) => {
     evt.preventDefault()
     let nomeCompleto = document.getElementById('nomeCompleto').value;
     let cpf = document.getElementById('cpf').value;
@@ -25,5 +25,46 @@ function sendUsers(evt) {
     }
 
     document.getElementById('formUsers').reset();
+    alert('Usuario Cadastrado com sucesso!')
+}
+
+const createTable = () =>{
+    const tableUsers = localStorage.getItem('db_users')
+    const users = JSON.parse(tableUsers)
+    
+    const arrayValue = (users) => {
+        let html = "";
+        users.forEach(user => {
+        html += `
+        <tr>
+            <td>${user.nomeCompleto}</td>
+            <td>${user.cpf}</td>
+            <td>${user.dataNascimento}</td>
+            <td>${user.email}</td>
+            <td>${user.telefone}</td>
+        </tr>
+        `;
+    });
+    return html
+    }
+
+    document.getElementById('tableUser').innerHTML = `
+        <div>
+            <table class="table table-hover">
+                <thead class="header-table">
+                    <th scope="col">Nome Completo</th>
+                    <th scope="col">CPF</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Telefone</th>
+                </thead>
+                <tbody>
+                    ${arrayValue(users)}
+                </tbody>
+            </table>
+        </div>
+    `;
 
 }
+
+createTable()
