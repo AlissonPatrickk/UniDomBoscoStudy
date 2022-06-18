@@ -66,13 +66,5 @@ const createTable = () =>{
     `;
 
 }
-const pageError = () => {
-    var url = pageError;
-    
-        console.log(url)
-
-
-}
 
 createTable()
-pageError()
